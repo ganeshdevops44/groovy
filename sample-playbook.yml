@@ -1,0 +1,9 @@
+---
+- name: play book for taking IP and hostname
+  hosts: all
+  become: yes
+  tasks:
+    - name: take ouput of target machine
+      shell: ifconfig -a
+    - name: taking hostname
+      shell: hostanme
